@@ -4,6 +4,9 @@ from libs.game_manager import GameManager
 
 
 def main():
+    """
+    The Main Function. Ideally, just add games here, and run the thing
+    """
     game_manager = GameManager()
 
     game_manager.add_game("hello", HiGame());

@@ -10,13 +10,11 @@ class WorldGame(Game):
 
     @override
     def init(self):
-        pass
+        self.rect.fill((255, 255, 0))
 
     @override
     def render(self, screen: pygame.Surface):
-        self.rect.fill((255, 255, 0))
         screen.blit(self.rect, pygame.Rect(20, 20, 50, 50))
-        pass
 
     @override
     def update(self, events: list[pygame.Event], manager: GameManager, screen: pygame.Surface):
