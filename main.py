@@ -1,27 +1,16 @@
-import pygame
-import sys
+from games.hi import HiGame
+from games.world import WorldGame
+from libs.game_manager import GameManager
 
 
 def main():
-    pygame.init()
+    game_manager = GameManager()
 
-    screen_width = 800
-    screen_height = 600
+    game_manager.add_game("hello", HiGame());
+    game_manager.add_game("world", WorldGame());
+    game_manager.start("hello")
 
-    screen = pygame.display.set_mode((screen_width, screen_height))
-
-    running = True
-    while running:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                running = False
-        
-        screen.fill((255, 255, 255))
-
-        pygame.display.flip()
-
-    pygame.quit()
-    sys.exit()
+    game_manager.run()
 
 if __name__ == "__main__":
     main()
