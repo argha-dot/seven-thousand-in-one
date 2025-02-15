@@ -73,7 +73,7 @@ class GameManager:
         self.current_game = name
         active = self.get_active_game()
         if active:
-            active.init()
+            active.init(self.screen)
             
 
     def run(self):

@@ -10,14 +10,12 @@ class HiGame(Game):
 
     # This override is here because of my editor's OCD, but you can live without it
     @override
-    def init(self):
+    def init(self, screen: pygame.Surface):
         self.rect.fill((255, 0, 0))
-        pass
 
     @override
     def render(self, screen: pygame.Surface):
         screen.blit(self.rect, pygame.Rect(20, 20, 50, 50))
-        pass
 
     @override
     def update(self, events: list[pygame.Event], manager: GameManager, screen: pygame.Surface):

@@ -9,7 +9,7 @@ class WorldGame(Game):
     rect: pygame.Surface = pygame.Surface((50, 50))
 
     @override
-    def init(self):
+    def init(self, screen: pygame.Surface):
         self.rect.fill((255, 255, 0))
 
     @override

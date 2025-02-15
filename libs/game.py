@@ -12,7 +12,7 @@ class Game(ABC):
     This is the Game's Base Class. All Games will inherit from this class, and you must override the methods, otherwise an error will be thrown
     """
     @abstractmethod
-    def init(self):
+    def init(self, screen: pygame.Surface):
         """
         Initialize your game's variables here, for example loading colors and all will fall here
         """
